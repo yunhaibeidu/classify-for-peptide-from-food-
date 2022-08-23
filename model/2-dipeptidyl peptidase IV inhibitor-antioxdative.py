@@ -23,10 +23,10 @@ from sklearn.model_selection  import cross_val_score
 np.random.seed(0)# 设置随机种子，不设置的话默认是按系统时间作为参数，因此每次调用随机模块时产生的随机数都不一样设置后每次产生的一样
 data = np.loadtxt(open("E:/学校文件/论文/paper/data/new_data/2-dipeptidyl peptidase IV inhibitor-antioxdative_315.csv"),delimiter=",",skiprows=1)
 data_p=np.loadtxt(open("E:/学校文件/论文/paper/data/新建文件夹/antioxidative_dipeptidyl peptidase IV inhibitor_35.csv"),delimiter=",",skiprows=1)
-data_x=data[:,0:2]
+data_x=data[:,0:4]
 data_y=data[:,4]
 data_x=preprocessing.StandardScaler().fit_transform(data_x)
-data_xp=data_p[:,0:2]
+data_xp=data_p[:,0:4]
 data_yp=data_p[:,4]
 data_xp=preprocessing.StandardScaler().fit_transform(data_xp)
 print(data_x)
